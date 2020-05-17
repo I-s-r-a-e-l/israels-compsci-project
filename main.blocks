@@ -1,0 +1,18 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="4wX[fdXcm~mv+8%o7N3g">Player</variable><variable type="KIND_SpriteKind" id="PKwNJb5KlsKkwk_tQqK6">Projectile</variable><variable type="KIND_SpriteKind" id="?ia(OYEmR+dP+wK37@SJ">Food</variable><variable type="KIND_SpriteKind" id="xPWmfhDC+h)j~XXhA}L|">Enemy</variable><variable id="B4+c_?Pwq#.y7m=XQmc#">mySprite</variable><variable id="xHyShN4gq_osmD8D2)b;">myEnemy</variable><variable id="0;$/(7K3[XS09;H,PL3D">anim</variable><variable type="ActionKind" id="M;EY0H2FD+TPqe*InkJH">0Walking</variable><variable type="ActionKind" id="*,6o{i[Jw!:,Gl-jN6?X">1Idle</variable><variable type="ActionKind" id="h2IG7uu6`.VtHd9hbJ)L">2Jumping</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="gamesetbackgroundcolor"><value name="color"><shadow type="colorindexpicker"><field name="index">9</field></shadow></value><next><block type="particlesStartScreenAnimation"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><field name="effect">effects.blizzard</field><next><block type="variables_set"><field name="VAR" id="B4+c_?Pwq#.y7m=XQmc#">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . b 5 b . . . 
+. . . . . . . . . b 5 b . . . . 
+. . . . . . . . . b c . . . . . 
+. . . . . . b b b b b b . . . . 
+. . . . . b b 5 5 5 5 5 b . . . 
+. . . . b b 5 d 1 f 5 5 d f . . 
+. . . . b 5 5 1 f f 5 d 4 c . . 
+. . . . b 5 5 d f b d d 4 4 . . 
+b d d d b b d 5 5 5 4 4 4 4 4 b 
+b b d 5 5 5 b 5 5 4 4 4 4 4 b . 
+b d c 5 5 5 5 d 5 5 5 5 5 b . . 
+c d d c d 5 5 b 5 5 5 5 5 5 b . 
+c b d d c c b 5 5 5 5 5 5 5 b . 
+. c d d d d d d 5 5 5 5 5 d b . 
+. . c b d d d d d 5 5 5 b b . . 
+. . . c c c c c c c c b b . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="Sprite_blockCombine_set"><field name="property">Sprite.ay@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="B4+c_?Pwq#.y7m=XQmc#">mySprite</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">300</field></shadow></value><next><block type="variables_set"><field name="VAR" id="0;$/(7K3[XS09;H,PL3D">anim</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="createAnimation"><value name="action"><shadow type="action_enum_shim"><field name="MEMBER">2Jumping</field></shadow></value><value name="interval"><shadow type="math_number"><field name="NUM">25</field></shadow></value></block></value></block></next></block></next></block></next></block></next></block></statement></block></xml>
