@@ -3,9 +3,18 @@ enum ActionKind {
     Idle,
     Jumping
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
+    game.over(false)
+})
+controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
+    mySprite.vy = -100
+    animation.setAction(mySprite, ActionKind.Jumping)
+    mySprite.startEffect(effects.rings, 300)
+})
+let mySprite: Sprite = null
 scene.setBackgroundColor(9)
 effects.blizzard.startScreenEffect()
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
 . . . . . . . . . . b 5 b . . . 
 . . . . . . . . . b 5 b . . . . 
 . . . . . . . . . b c . . . . . 
@@ -133,3 +142,4 @@ c b d c d 5 5 b 5 5 5 5 5 5 b .
 . . . c c c c c c c c b b . . . 
 . . . . . . . . . . . . . . . . 
 `)
+animation.attachAnimation(mySprite, anim)
