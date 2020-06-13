@@ -511,6 +511,29 @@ game.onUpdateInterval(1500, function () {
     projectile = sprites.createProjectileFromSide(bottomImage, -45, 0)
     projectile.bottom = scene.screenHeight()
 })
+game.onUpdateInterval(1500, function () {
+    if (info.score() == 10) {
+        game.showLongText("You have reached the first checkpoint.", DialogLayout.Bottom)
+        music.playMelody("A B A B C5 B A B ", 120)
+    }
+    if (info.score() == 20) {
+        game.showLongText("You have reached the second checkpoint.", DialogLayout.Bottom)
+        music.playMelody("A B A B C5 B A B ", 120)
+    }
+    if (info.score() == 30) {
+        game.showLongText("You have reached the third checkpoint.", DialogLayout.Bottom)
+        music.playMelody("A B A B C5 B A B ", 120)
+    }
+    if (info.score() == 40) {
+        game.showLongText("You have reached the fourth checkpoint.", DialogLayout.Bottom)
+        music.playMelody("A B A B C5 B A B ", 120)
+    }
+    if (info.score() == 50) {
+        game.showLongText("You have reached the Fifth checkpoint.", DialogLayout.Bottom)
+        game.showLongText("You are now in endless mode. Game continues in 3... 2... 1...", DialogLayout.Bottom)
+        music.playMelody("A B A B C5 B A B ", 120)
+    }
+})
 game.onUpdate(function () {
     if (mySprite.vy > 0) {
         animation.setAction(mySprite, ActionKind.Idle)
